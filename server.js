@@ -14,11 +14,11 @@ app.use(bodyParser.json());
 // Connexion BDD
 
 const db = mysql.createConnection({
-    host: process.env.DB_HOST,    
-    user: process.env.DB_USER,       
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    port: process.env.DB_PORT
+    host: process.env.MYSQLHOST,    
+    user: process.env.MYSQLUSER,       
+    password: process.env.MYSQL_ROOT_PASSWORD,
+    database: process.env.MYSQLDATABASE,
+    port: process.env.MYSQL_PORT,
 });
 
 db.connect((err) => {
